@@ -22,7 +22,7 @@ function Playerjs(options) {
     window.Adblock_Detector = () => console.log("Fuck adblock detectors");
     window.devtoolsDetector={isLaunch:()=>true};
     var a=/setAttribute(.*?)'id', '(.*?)'/g.exec(CryptoJSAesJson.decrypt(window.JScripts,"a7igbpIApajDyNe"));
-    window.onload = () {
+    window.onload = () => {
         document.getElementById(options.id).remove();
         document.getElementById(a[2]).remove();
         addJs("https://cdn.vidstack.io/player");
