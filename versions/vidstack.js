@@ -26,4 +26,5 @@ function Playerjs(options) {
     addCss("https://cdn.vidstack.io/player/theme.css");
     addCss("https://cdn.vidstack.io/player/video.css");
     document.body.appendChild(createElementFromHTML('<media-player title="video_player" src="'+options.file+'"><media-provider><media-poster src="'+options.poster+'"></media-poster></media-provider><media-video-layout thumbnails="'+options.thumbnails+'"></media-video-layout></media-player>'));
+    return {api: (a,b) => console.log(a,b)}
 }
