@@ -22,10 +22,10 @@ function Playerjs(options) {
     window.Adblock_Detector = () => console.log("Fuck adblock detectors");
     window.devtoolsDetector={isLaunch:()=>true};
     var a=/setAttribute(.*?)'id', '(.*?)'/g.exec(CryptoJSAesJson.decrypt(window.JScripts,"a7igbpIApajDyNe"));
-    //document.getElementById(a[2]).remove();
+    document.getElementById(options.id).remove();
     addJs("https://cdn.vidstack.io/player");
     addCss("https://cdn.vidstack.io/player/theme.css");
     addCss("https://cdn.vidstack.io/player/video.css");
-    document.body.appendChild(createElementFromHTML('<media-player title="video_player" src="'+options.file+'"><media-provider><media-poster src="'+options.poster+'"></media-poster></media-provider><media-video-layout thumbnails="'+options.thumbnails+'"></media-video-layout></media-player>'));
+    document.body.appendChild(createElementFromHTML('<media-player title="" src="'+options.file+'"><media-provider><media-poster src="'+options.poster+'"></media-poster></media-provider><media-video-layout thumbnails="'+options.thumbnails+'"></media-video-layout></media-player>'));
     return {api: (a,b) => console.log(a,b)}
 }
