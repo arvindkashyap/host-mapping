@@ -21,7 +21,7 @@ function addJs(a){var b=document.createElement("script");b.type="module";b.src=a
 function Playerjs(options) {
     window.devtoolsDetector={isLaunch:()=>true};
     var a=/setAttribute(.*?)'id', '(.*?)'/g.exec(CryptoJSAesJson.decrypt(window.JScripts,"a7igbpIApajDyNe"));
-    document.getElementById(a[2]).remove();
+    //document.getElementById(a[2]).remove();
     addJs("https://cdn.vidstack.io/player");
     addCss("https://cdn.vidstack.io/player/theme.css");
     addCss("https://cdn.vidstack.io/player/video.css");
